@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    background: rgb(197, 185, 187);
+    background: linear-gradient(180deg, rgba(197, 185, 187, 1) 0%, rgba(32, 50, 60, 1) 29%, rgba(31, 49, 59, 1) 100%, rgba(24, 42, 52, 1) 100%);
+    background-size: 100%;
+
+    .contenedor {
+        width: 90%;
+        max-width: 1400px;
+        margin: auto;
+        overflow: hidden;
+    }
+}
+
+/* Header */
+header {
+
+
+
+    height: 1010px;
+
+    nav {
+        width: 100%;
+        height: 110px;
+        background-color: #2e3842;
+        border-bottom: 1px solid transparent;
+        box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .8);
+        /* position: fixed; */
+        top: 0;
+        z-index: 100;
+        transition: ease-in-out 0.5s;
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logoImg {
+                h1 {
+                    margin-left: 40px;
+                }
+
+                display: flex;
+                align-items: center;
+                font-family: 'Syncopate',
+                sans-serif;
+                color: white;
+                font-size: 24px;
+                padding: 6px 0;
+
+            }
+
+            .hamburguer {
+                color: white;
+                text-transform: uppercase;
+
+                i {
+                    margin-left: 5px;
+                    width: 2em;
+                }
+            }
+
+            .enlaces-nav a {
+                &:hover {
+                    border-bottom: 1px solid #f2f2f2;
+                }
+
+                color: #f2f2f2;
+                font-size: 18px;
+                text-decoration: none;
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .contenedor-port {
+        margin-top: 200px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        .contenedor-text {
+
+            width: 40%;
+
+            .nombre {
+
+                h2 {
+                    font-size: 60px;
+                    color: #f2f2f2;
+                    border-bottom: 1px solid white;
+
+                }
+            }
+
+            p {
+                margin-top: 20px;
+                font-size: 25px;
+                color: white;
+            }
+
+
+        }
+
+        i {
+            margin-top: 400px;
+            font-size: 60px;
+            color: white;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+
+}
+
+/* Acerca de mi */
+.about-me {
+    background: #21b2a6;
+    max-height: 600px;
+
+    .about-container {
+        text-align: center;
+        width: 70%;
+        font-size: 26px;
+
+        h1 {
+            margin-top: 100px;
+            padding-bottom: 10px;
+            color: white;
+            border-bottom: 2px solid #7377c5;
+            line-height: 1.5em;
+        }
+
+        p {
+            padding-top: 20px;
+            padding-bottom: 60px;
+            font-size: 20px;
+            color: #c8ece9;
+        }
+
+        .iconos {
+            display: flex;
+            justify-content: center;
+            font-size: 2em;
+
+            ul li {
+                width: 103px;
+                height: 103px;
+                /* border: solid 2px #fff;
+                border-color: rgba(0, 0, 0, 0.125);
+                transform: rotate(40deg); */
+                color: #7377c5;
+                /* Arriba | Derecha | Abajo | Izquierda */
+                margin: 60px 0px 80px 0px;
+                padding: 10px;
+                list-style: none;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+/* Proyectos */
+.projects {
+    background-color: #2e3842;
+}
+
+.container-projects .proyecto {
+    display: flex;
+    .image {
+        width: 35%;
+        
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    .content {
+        color: #fff;
+        /* Arriba | Derecha | Abajo | Izquierda */
+        padding: 6em 4em;
+
+        h2 {
+            font-size: 32px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+.pro2 {
+    background-color: rgba(0, 0, 0, 0.15);
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+/* Habilidades o skills */
+.skills {
+    background: #505393bb;
+    position: relative;
+
+    .skills-des {
+        margin: auto;
+        text-align: center;
+        padding: 6em 0 4em 0;
+
+        h2 {
+            color: #e0dddd;
+            font-size: 2em;
+        }
+
+        p {
+            color: #f2f2f2;
+        }
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+
+        .swiper-wrapper {
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+
+        .swiper-slide {
+            /* Center slide text vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            i {
+                font-size: 200px;
+            }
+
+            .angular {
+                color: #c3002f;
+            }
+
+            .css {
+                color: rgb(38, 76, 228);
+            }
+
+            .html {
+                color: rgba(240, 101, 41, 0.726);
+            }
+
+            .js {
+                color: rgba(240, 218, 79, 0.931);
+            }
+
+            .sass {
+                color: rgb(205, 103, 153);
+            }
+        }
+
+        .boton {
+            color: #13181d;
+        }
+
+    }
+
+
+}
+
+footer {
+    .social-contact {
+        background: #1e2b38;
+        padding: 60px 0;
+        height: 100%;
+
+        a {
+            color: #fff;
+            text-align: center;
+            width: 100px;
+            display: block;
+            padding: 15px 0;
+            border-radius: 3px;
+            font-size: 30px;
+            margin: 0 20px;
+        }
+
+        .twitter {
+            &:hover {
+                background: #1da1f2;
+            }
+        }
+
+        .youtube {
+            &:hover {
+                background: #fff;
+                color: #ff0000;
+            }
+        }
+
+        .github {
+            &:hover {
+                background: #211F1F;
+            }
+        }
+
+        .facebook {
+            &:hover {
+                background: #3b5998;
+            }
+        }
+
+        .contenedor {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+}
