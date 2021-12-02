@@ -6,7 +6,8 @@
 
 body {
     font-family: 'Titillium Web', sans-serif;
-    background: rgb(197, 185, 187);
+    background: rgb(197, 185, 187),transparent;
+    background-image: url('/img/laptop2.jpg');
     background: linear-gradient(180deg, rgba(197, 185, 187, 1) 0%,
             rgba(32, 50, 60, 1) 29%,
             rgba(31, 49, 59, 1) 100%,
@@ -22,7 +23,7 @@ body {
 
 /* Header */
 header {
-
+    
 
 
     height: 1010px;
@@ -86,7 +87,7 @@ header {
         text-align: center;
         display: flex;
         justify-content: center;
-
+        
         .contenedor-text {
 
             width: 40%;
@@ -127,7 +128,7 @@ header {
 /* Acerca de mi */
 .about-me {
     background: #21b2a6;
-    max-height: 600px;
+    
 
     .about-container {
         text-align: center;
@@ -144,7 +145,6 @@ header {
 
         p {
             padding-top: 20px;
-            padding-bottom: 60px;
             font-size: 20px;
             color: #c8ece9;
         }
@@ -179,13 +179,6 @@ header {
 .container-projects .proyecto {
     display: flex;
     
-
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.15);
-        img {
-
-        }
-    }
     .image {
         width: 40%;
 
@@ -211,6 +204,7 @@ header {
 }
 
 .pro2 {
+    background-color: rgba(0, 0, 0, 0.15);
     flex-direction: row-reverse;
     text-align: right;
 }
@@ -272,7 +266,7 @@ header {
 
 footer {
     .social-contact {
-        background: #1e2b38;
+        background-color: #2e3842;
         padding: 60px 0;
         height: 100%;
 
@@ -318,4 +312,124 @@ footer {
         }
     }
 
+}
+
+/* Mediaqueries */
+@media screen and (max-width:1024px) {
+    header {
+        max-height: 900px;
+        nav{
+            .nav-container {
+                h1 {
+                    font-size: 24px;
+                }
+                padding: 10px;
+                .logoImg {
+                    img {
+                        width: 60px;
+                    }
+                }
+            }
+        }
+
+        .contenedor-port {
+            .contenedor-text {
+                p {
+                    font-size: 24px;
+                }
+                .nombre {
+                    h2 {
+                        font-size: 42px;
+                    }
+                }
+                i{
+                    margin-top: 300px;
+                }
+            }
+        }
+    }
+
+    section {
+        .about-me {
+            h1 {
+                font-size: 42px;
+            }
+        }  
+    }
+
+    .projects {
+        .proyecto {
+            max-height: 300px;
+            .image {
+                width: 66%;
+            }
+            .content {
+                padding: 3em 6em;
+                h2 { font-size: 28px;}
+                p { font-size: 18px;}
+            }
+        }    
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    header {
+        max-height: 900px;
+        nav{
+            .nav-container {
+                h1 {
+                    font-size: 22px;
+                }
+                padding: 5px;
+                .logoImg {
+                    img {
+                        width: 40px;
+                    }
+                }
+            }
+        }
+
+        .contenedor-port {
+            .contenedor-text {
+                p {
+                    font-size: 22px;
+                }
+                .nombre {
+                    width: 300px;
+                    h2 {
+                        font-size: 36px;
+                    }
+                }
+                i{
+                    margin-top: 300px;
+                }
+            }
+        }
+    }
+
+    section {
+        .about-me {
+            h1 {
+                font-size: 42px;
+            }
+        }  
+    }
+
+    .projects {
+        .proyecto {
+            flex-direction: column;
+            max-height: 900px;
+            .image {
+                width: 100%;
+            }
+            .content {
+                padding: 3em 6em;
+                margin-bottom: 150px;
+                text-align: center;
+                h2 { font-size: 28px;}
+                p { font-size: 18px; margin-top: 20px;}
+            }
+        }    
+    }
 }
