@@ -481,7 +481,7 @@ footer {
         }
         .contenedor-port {
             .contenedor-text {
-                margin-left: 50px;
+               margin-left: 20px;
                 width: 100%;
             }
         }
@@ -489,6 +489,7 @@ footer {
     .about-me {
         .about-container {
             h1 { margin-top: 50px;}
+            p { font-size: 18px; }
             width: 90%;
         }
     }
@@ -499,6 +500,42 @@ footer {
                 padding: 2em 2em;
                 margin-bottom: 120px;
             }
+        }
+    }
+    .skills {
+        .skills-des {
+            padding: 4em 0;
+        }
+        .swiper {
+            .swiper-slide {
+                img { width: 150px; }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:375px) {
+    .about-me {
+        .about-container {
+            p { font-size: 18px; }
+        }
+    }
+
+    .projects {
+        .proyecto {
+            .content {
+                h2 { font-size: 26px;}
+                p { font-size: 16px;}
+                padding: 1em 2em;
+                margin-bottom: 140px;
+            }
+        }
+    }
+
+    .skills {
+        padding: 0 0 30px 0;
+        .skills-des {
+            padding: 3em 1em;
         }
     }
 }
