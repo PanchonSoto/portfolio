@@ -512,9 +512,9 @@ footer {
 
 @media screen and (max-width:425px) {
     header {
-        background-image: url('../../img/portadaimg2.jpg');
+        background-image: url('../../img/portadaimg.webp');
         background-size: cover;
-        max-height: 800px;
+        max-height: 850px;
         nav {
             height: 90px;
             .nav-container {
@@ -531,7 +531,7 @@ footer {
             .contenedor-text {
                 margin-left: 20px;
                 width: 100%;
-                i{ margin-top: 250px; }
+                i{ margin-top: 220px; }
             }
         }
     }
@@ -554,7 +554,7 @@ footer {
     }
     .skills {
         .skills-des {
-            padding: 4em 0;
+            padding: 4em 2em;
         }
         .swiper {
             .swiper-slide {
