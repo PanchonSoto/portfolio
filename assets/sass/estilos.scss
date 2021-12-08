@@ -1,6 +1,4 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -17,6 +15,24 @@ body {
         overflow: hidden;
     }
 }
+
+html, body, div, span, applet, object,
+	iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+	pre, a, abbr, acronym, address, big, cite,
+	code, del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var, b,
+	u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+	form, label, legend, table, caption, tbody,
+	tfoot, thead, tr, th, td, article, aside,
+	canvas, details, embed, figure, figcaption,
+	footer, header, hgroup, menu, nav, output, ruby,
+	section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+	}
 
 /* Header */
 header {
@@ -86,7 +102,7 @@ header {
             .nombre {
 
                 h2 {
-                    font-size: 60px;
+                    font-size: 3.2em;
                     color: #f2f2f2;
                     border-bottom: 1px solid white;
 
@@ -95,7 +111,7 @@ header {
 
             p {
                 margin-top: 20px;
-                font-size: 25px;
+                font-size: 1.55em;
                 color: white;
             }
 
@@ -119,38 +135,36 @@ header {
 /* Acerca de mi */
 .about-me {
     background: #5EA5EC;
-    height: 600px;
+    height: 800px;
 
     .about-container {
         text-align: center;
-        width: 70%;
-        font-size: 26px;
+        width: 80%;
 
         h1 {
             margin-top: 100px;
-            padding-bottom: 10px;
+            padding-bottom: 5px;
             color: #fff;
+            font-size: 2.7em;
             border-bottom: 2px solid hsla(210, 43%, 29%, 0.5);
-            line-height: 1.5em;
+            line-height: 2.5em;
         }
 
         p {
             padding-top: 20px;
-            font-size: 20px;
+            font-size: 1.3em;
             color: #e9fbfa;
         }
 
         .iconos {
+            margin-top: 100px;
             display: flex;
             justify-content: center;
-            font-size: 2em;
+            font-size: 3.5em;
 
             ul li {
                 width: 103px;
                 height: 103px;
-                /* border: solid 2px #fff;
-                border-color: rgba(0, 0, 0, 0.125);
-                transform: rotate(40deg); */
                 color: #2A4969;
                 /* Arriba | Derecha | Abajo | Izquierda */
                 margin: 60px 0px 80px 0px;
@@ -165,13 +179,15 @@ header {
 /* Proyectos */
 .projects {
     background-color: #2e3842;
+    min-height: 367px;
 }
 
 .container-projects .proyecto {
     display: flex;
-    
     .image {
         width: 45%;
+        max-width: 600px;
+        
         img {
             width: 100%;
             display: block;
@@ -181,28 +197,28 @@ header {
     .content {
         color: #e6e7f5;
         /* Arriba | Derecha | Abajo | Izquierda */
-        padding: 4em 4em;
-
+        padding: 8em 4em;
         h2 {
-            font-size: 32px;
+            font-size: 2.4em;
+            margin-bottom: 10px;
         }
-
         p {
-            font-size: 20px;
+            font-size: 1.25em;
         }
+       
     }
 }
 
 .pro2 {
     background-color: rgba(0, 0, 0, 0.15);
     flex-direction: row-reverse;
-    text-align: right;
+    text-align: end;
 }
 
 /* Habilidades o skills */
 .skills {
     background-color: #2A4969;
-    padding: 0 0 48px  0;
+    padding: 0 0 60px  0;
     .skills-des {
         margin: auto;
         text-align: center;
@@ -210,11 +226,13 @@ header {
 
         h2 {
             color: #fff;
-            font-size: 2em;
+            font-size: 2.4em;
+            margin-bottom: 10px;
         }
 
         p {
             color: #fff;
+            font-size: 1.25em;
         }
     }
 
@@ -254,10 +272,11 @@ header {
 }
 
 footer {
+    background-color: #2e3842;
     .social-contact {
-        background-color: #2e3842;
+        background-color: rgba(0,0,0,0.15);
+        
         padding: 60px 0;
-        height: 100%;
 
         a {
             color: #fff;
@@ -304,7 +323,20 @@ footer {
 }
 
 /* Mediaqueries */
-@media screen and (max-width:1290px) {
+
+@media screen and (max-width:1280px) {
+
+    .container-projects {
+        .proyecto{
+            .content {
+                padding: 6em 2em;
+                h2 {font-size: 1.7em;}
+             }
+        } 
+    } 
+}
+
+/* @media screen and (max-width:1290px) {
     section {
         .about-me {
             h1 {
@@ -314,19 +346,19 @@ footer {
     }
     .projects {
         .proyecto {
-            max-height: 300px;
+            max-height: 310px;
             .image {
-                width: 37%;
+                width: 32%;
             }
             .content {
-                padding: 3em 2em;
+                padding: 3em 4em;
                 h2 { font-size: 30px;}
                 p { font-size: 18px;}
             }
         }    
     }
 
-}
+}  */
 
 @media screen and (max-width:1024px) {
     header {
@@ -353,7 +385,7 @@ footer {
                 }
                 .nombre {
                     h2 {
-                        font-size: 42px;
+                        font-size: 2.4em;
                     }
                 }
                 i{
@@ -373,16 +405,29 @@ footer {
 
     .projects {
         .proyecto {
-            max-height: 300px;
             .image {
-                width: 70%;
+                width: 80%;
             }
             .content {
-                padding: 3em 3em;
-                h2 { font-size: 28px;}
-                p { font-size: 18px;}
+                padding: 5em 2em;
+                h2 {font-size: 1.5em; }
+                p { font-size: 1.1em;}
             }
         }    
+    }
+
+    .skills {
+        padding: 0 0 50px  0;
+        .skills-des {
+            padding: 3em 0 4em 0;
+            h2 { font-size: 2em;}
+            p {font-size: 1.1em;}
+        }
+        .swiper {
+            .swiper-slide {
+                img { width: 150px; }
+            }
+        }
     }
 
 }
@@ -430,24 +475,26 @@ footer {
         }
     }
 
-    section {
-        .about-me {
-            h1 {
-                font-size: 42px;
-            }
+    .about-me {
+        
+        .about-container {
+            h1 { font-size: 2.4em; }
+            p { font-size: 1.2em; }
         }  
     }
+    
 
     .projects {
         .proyecto {
             flex-direction: column;
-            max-height: 900px;
+            max-height: 1200px;
             .image {
                 width: 100%;
+                max-width: 100%;
             }
             .content {
-                padding: 3em 6em;
-                margin-bottom: 150px;
+                padding: 2em 2em;
+                margin-bottom: 120px;
                 text-align: center;
                 h2 { font-size: 28px;}
                 p { font-size: 18px; margin-top: 20px;}
@@ -467,6 +514,7 @@ footer {
     header {
         background-image: url('../../img/portadaimg2.jpg');
         background-size: cover;
+        max-height: 800px;
         nav {
             height: 90px;
             .nav-container {
@@ -481,13 +529,15 @@ footer {
         }
         .contenedor-port {
             .contenedor-text {
-               margin-left: 20px;
+                margin-left: 20px;
                 width: 100%;
+                i{ margin-top: 250px; }
             }
         }
     }
     .about-me {
         .about-container {
+            padding: 0 1em;
             h1 { margin-top: 50px;}
             p { font-size: 18px; }
             width: 90%;
@@ -497,7 +547,7 @@ footer {
     .projects {
         .proyecto {
             .content {
-                padding: 2em 2em;
+                padding: 2em 1em;
                 margin-bottom: 120px;
             }
         }
