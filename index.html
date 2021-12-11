@@ -3,45 +3,49 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Portafolio Pancho</title>
+    <link rel="code icon" href="img/code.svg">
     <link rel="stylesheet" href="assets/css/estilos.css" />
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/swiper.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </head>
 
 <body>
     <header>
-        <nav>
-            <section class="nav-container contenedor">
+        <nav class="nav">
+            <section  class="nav-container contenedor">
                 <div class="logoImg">
-                    <img src="img/doge.png" alt="Logo Doge" width="80px" />
+                    <img src="img/rsz_1doge.png" alt="Logo Doge" width="80px" />
                     <h1>Pancho</h1>
                 </div>
-                <div class="enlaces-nav">
-                    <a href="">Inicio</a>
-                    <a href="">Acerca de</a>
-                    <a href="">Proyectos</a>
-                    <a href="">Tecnologías</a>
+                <div class="enlaces-nav desactive">
+                    <div class="btn-cancel">
+                        <div class="menu">
+                            <h2>MENU</h2>
+                            <img src="img/xcross.svg" alt="x">
+                        </div>
+                    </div>
+                    <a href="#home">Inicio</a>
+                    <a href="#about">Acerca</a>
+                    <a href="#projects">Proyectos</a>
+                    <a href="#skills">Habilidades</a>
                 </div>
-
                 <div class="hamburguer"><img src="img/menu.svg" alt="Menubar"></div>
             </section>
         </nav>
 
-        <div class="contenedor-port contenedor">
+        <div id="home" class="contenedor-port contenedor">
             <div class="contenedor-text">
 
                     <h2>Francisco Soto</h2>
                     <p>Desarrollador Web</p>
-                    <i class="fas fa-angle-down"></i>
+                    <div><img src="img/down.svg" alt="down arrow"></div>
             </div>
         </div>
     </header>
 
-    <section class="about-me">
+    <section id="about" class="about-me">
         <div class="about-container contenedor">
             <h1>Sobre mi</h1>
             <p>
@@ -60,11 +64,11 @@
     </section>
 
     <!-- SECTION PROJECTS -->
-    <section class="projects">
+    <section id="projects" class="projects">
         <div class="container-projects">
             <section class="proyecto">
                 <div class="image">
-                    <img src="img/heroesApp.webp" alt="App1" width="600px" />
+                    <img  src="img/heroesApp.webp" alt="App1" width="600px" />
                 </div>
                 <div class="content">
                     <h2>Magna primis lobortis sed ullamcorper</h2>
@@ -76,7 +80,7 @@
             </section>
             <section class="proyecto pro2">
                 <div class="image">
-                    <img src="img/heroesApp.webp" alt="App2" width="600px" />
+                    <img  src="img/heroesApp.webp" alt="App2" width="600px" />
                 </div>
                 <div class="content">
                     <h2>Magna primis lobortis sed ullamcorper</h2>
@@ -88,7 +92,7 @@
             </section>
             <section class="proyecto">
                 <div class="image">
-                    <img src="img/heroesApp.webp" alt="App3" width="600px" />
+                    <img  src="img/heroesApp.webp" alt="App3" width="600px" />
                 </div>
                 <div class="content">
                     <h2>Magna primis lobortis sed ullamcorper</h2>
@@ -102,12 +106,11 @@
     </section>
 
     <!-- SECTION SKILLS -->
-    <section class="skills">
-        <div class="skills-des">
-            <h2>Lorem ipsum dolor sit.</h2>
+    <section id="skills" class="skills">
+        <div class="skills-des contenedor">
+            <h2>Habilidades</h2>
             <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi,
-                tenetur!
+                Estas son algunas de las tecnologias, lenguajes y frameworks con las que tengo experiencia.
             </p>
         </div>
 
@@ -121,8 +124,8 @@
                     <img src="img/rxjs-1.svg" alt="RxJS" width="200px" />
                     <h3>RxJS</h3>
                 </div>
-                <div class="swiper-slide">
-                    <img src="img/npm-logo.png" alt="npm" width="200px" />
+                <div class="swiper-slide npm">
+                    <img src="img/rsz_npm-logo.png" alt="npm" width="200px" />
                     <h3>NPM</h3>
                 </div>
                 <div class="swiper-slide">
@@ -130,18 +133,10 @@
                     <h3>Git</h3>
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/javascript2.png" alt="JavaScript" width="200px" />
-                    <h3>JavaScript</h3>
+                    <img src="img/ts-logo-256.png" alt="TypeScript" width="200px" />
+                    <h3>TypeScript</h3>
                 </div>
 
-                <div class="swiper-slide">
-                    <img src="img/html5-logo-31813.png" alt="HTML5" width="200px" />
-                    <h3>HTML</h3>
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/css.png" alt="CSS" width="200px" />
-                    <h3>CSS</h3>
-                </div>
                 <div class="swiper-slide">
                     <img src="img/Sass-Logo.png" alt="Sass" width="200px" />
                     <h3>Sass</h3>
@@ -155,13 +150,15 @@
     <footer>
         <section class="social-contact">
             <div class="contenedor">
-                <a href="#" class="twitter"><img title="Twitter" src="img/twitter.svg" alt="Twitter"></a>
-                <a href="#" class="github"><img title="GitHub" src="img/github.svg" alt="GitHub"></a>
-                <a href="#" class="linkedin"><img title="LinkedIn" src="img/linkedin.svg" alt="linkedin"></i></a>
+                <a href="https://twitter.com/Panshibe" target="_blank" class="twitter"><img title="Twitter" src="img/twitter.svg" alt="Twitter"></a>
+                <a href="https://github.com/PanchonSoto" target="_blank" class="github"><img title="GitHub" src="img/github.svg" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/pancho-garcia-575594222/" target="_blank" class="linkedin"><img title="LinkedIn" src="img/linkedin.svg" alt="linkedin"></i></a>
                 <a href="#" class="facebook"><img title="Facebook" src="img/facebook.svg" alt="Facebook"></i></a>
             </div>
         </section>
     </footer>
-</body>
 
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js" async></script>
+</body>
 </html>

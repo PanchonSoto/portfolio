@@ -25,7 +25,7 @@ body {
             rgba(24, 42, 52, 1) 100%);
     background-size: 100%; */
     .contenedor {
-        width: 80%;
+        width: 90%;
         margin: auto;
         overflow: hidden;
     }
@@ -47,23 +47,28 @@ html, body, div, span, applet, object,
 		border: 0;
 		font-size: 100%;
 		vertical-align: baseline;
+        scroll-behavior: smooth;
 	}
 
 /* Header */
 header {
-    background-image: url('../../img/portadaimg3.jpg');
-    background-size: cover;
-    height: 1010px;
+    &::before {
+        content: "";
+        display: block;
+    }
+    background-image: url('../../img/rsz_1portadaimg3.jpg');
+    background-size: 100%;
+    height: 1000px;
 
     nav {
         width: 100%;
         height: 110px;
         background-color: #2e3842;
         border-bottom: 1px solid transparent;
-        box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .8);
-        /* position: fixed; */
+        box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, .8);
+        position: fixed;
         top: 0;
-        z-index: 9;
+        z-index: 10;
         transition: ease-in-out 0.5s;
 
         .nav-container {
@@ -88,11 +93,17 @@ header {
 
             .hamburguer {
                 display: none;
-                img { width: 48px;}
+                img {
+                    &:hover { width: 60px; }
+                     width: 48px;
+                     transition: all .4s ease-in;
+                    }
             }
 
-            .enlaces-nav a {
-                &:hover {
+            .enlaces-nav 
+                .btn-cancel {display: none;}          
+                a {
+                    &:hover {
                     border-bottom: 1px solid #f2f2f2;
                 }
 
@@ -105,12 +116,13 @@ header {
     }
 
     .contenedor-port {
-        margin: 200px auto 0 auto;
+        margin: 10px auto 0 auto;
         text-align: center;
         display: flex;
         justify-content: center;
         
         .contenedor-text {
+            margin-top: 250px;
             width: 50%;
             h2 {
                 font-size: 3.2em;
@@ -127,9 +139,9 @@ header {
 
         }
 
-        i {
+        img {
             margin-top: 400px;
-            font-size: 60px;
+            width: 80px;
             color: white;
 
             &:hover {
@@ -194,7 +206,7 @@ header {
 .container-projects .proyecto {
     display: flex;
     .image {
-        width: 45%;
+        width: 50%;
         max-width: 600px;
         
         img {
@@ -232,7 +244,7 @@ header {
     .skills-des {
         margin: auto;
         text-align: center;
-        padding: 6em 0 4em 0;
+        padding: 6em 0;
 
         h2 {
             color: #fff;
@@ -250,9 +262,9 @@ header {
     .swiper {
         width: 100%;
         height: 100%;
-
+        padding: 37px 0;
         .swiper-wrapper {
-            margin-bottom: 50px;
+            margin-bottom: 75px;
         }
 
         .swiper-slide {
@@ -261,7 +273,6 @@ header {
             justify-content: center;
             align-items: center;
             flex-direction: column;
-
             img{
                 width: 200px;
             }
@@ -273,6 +284,10 @@ header {
                 font-family: 'Titillium Web';
                 font-style: italic;
             }
+        }
+        .npm {
+            margin-top: 60px;
+            h3 { margin-top: 84px;}
         }
 
         .boton {
@@ -297,7 +312,7 @@ footer {
             padding: 10px 0;
             border-radius: 3px;
             margin: 0 20px;
-
+            transition: all .5s ease;
             img {width: 42px;}
         }
 
@@ -383,15 +398,18 @@ footer {
         max-height: 900px;
         nav{
             .nav-container {
-                padding: 10px;
+                padding: 10px 0;
                 h1 {
                     font-size: 24px;
                 }
-                
                 .logoImg {
+                    padding: 10px;
                     img {
                         width: 60px;
                     }
+                }
+                .enlaces-nav {
+                    a { margin-left: 10px;}
                 }
             }
         }
@@ -444,9 +462,8 @@ footer {
     }
 
     .skills {
-        padding: 0 0 50px  0;
         .skills-des {
-            padding: 3em 0 4em 0;
+            padding: 4em 0;
             h2 { font-size: 2em;}
             p {font-size: 1.1em;}
         }
@@ -473,11 +490,61 @@ footer {
                         width: 60px;
                     }
                 }
+                .active {left: 0%;}
+                .desactive { left: -100%;}
                 .enlaces-nav {
-                    a {display: none;}
+                    
+                    position: fixed;
+                    top: 0;
+                    height: 100vh;
+                    width: 70%;
+                    background: #2e3842;
+                    padding: 150px 0 0 0;
+                    text-align: center;
+                    transition: all 0.4s ease;
+                    
+                    .btn-cancel {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 110px;
+                        background-color: rgba(0,0,0,0.15);
+                        .menu {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items:center; 
+                            
+                        }
+                        h2 {
+                            font-size: 2.5em;
+                            font-style: italic;
+                            color: #f2f2f2;
+                            padding: 0 0 0 60px;
+                        }
+                        img { 
+                            width: 3.5em;
+                            float: right;
+                            padding: 27px 0;
+                            margin-right: 15px;
+                        }
+                    }
+                    a {
+                        cursor:none;
+                        &:hover {
+                            color: #5EA5EC;
+                            border-bottom: 0;
+                            font-size: 2.5em;
+                        }
+                        display: block;  
+                        margin-top: 50px;
+                        text-decoration: none;
+                        font-size: 2em;
+                        transition: all 0.4s ease;
+                    }
                 }
                 .hamburguer {
-                    display: inline;    
+                    display: inline;  
                 }
             }
         }
@@ -544,13 +611,45 @@ footer {
         nav {
             height: 90px;
             .nav-container {
-                padding: 20px 0;
+                padding: 23px 0;
                 .logoImg {
                     h1 {margin-left: 0px}
                     img {
                         display: none;
                     }
                 }
+                .enlaces-nav {
+                    padding: 120px 0;
+                    .btn-cancel {
+                        height: 90px;
+                        .menu {
+                            h2 { 
+                                font-size: 1.5em;
+                                padding: 0 0 0 40px;
+                            }
+                            img {
+                                width: 2.5em;
+                                padding: 25px 0;
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                    a {
+                        &:hover {
+                            font-size: 2em;
+                        }
+                        font-size: 1.5em;
+                    }
+                }
+
+                .hamburguer {
+                    img {
+                        &:hover { width: 46px; }
+                         width: 38px;
+                         transition: all .4s ease-in;
+                        }
+                }
+                
             }
         }
         .contenedor-port {
