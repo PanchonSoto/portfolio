@@ -7,7 +7,6 @@ const btnCancel = document.querySelector(".btn-cancel");
 let ubiacionPrincipal = window.pageYOffset;
 window.addEventListener("scroll", ()=>{
     let actualScroll = window.pageYOffset;
-
     if(ubiacionPrincipal>=actualScroll){
         document.getElementsByTagName("nav")[0].style.top = "0px";
     }else {

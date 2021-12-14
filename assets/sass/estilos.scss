@@ -55,9 +55,10 @@ header {
     &::before {
         content: "";
         display: block;
+        margin-top: -10px;
     }
     background-image: url('../../img/rsz_1portadaimg3.jpg');
-    background-size: 100%;
+    background-size: cover;
     height: 1000px;
 
     nav {
@@ -123,7 +124,7 @@ header {
         
         .contenedor-text {
             margin-top: 250px;
-            width: 50%;
+            width: 40%;
             h2 {
                 font-size: 3.2em;
                 color: #f2f2f2;
@@ -605,7 +606,7 @@ footer {
 
 @media screen and (max-width:425px) {
     header {
-        background-image: url('../../img/portadaimg.webp');
+        background-image: url('../../img/portadaimg.webp') ;
         background-size: cover;
         max-height: 850px;
         nav {
