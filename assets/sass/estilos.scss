@@ -59,7 +59,7 @@ header {
     }
     background-image: url('../../img/rsz_1portadaimg3.jpg');
     background-size: cover;
-    height: 1000px;
+    height: 100vh;
 
     nav {
         width: 100%;
@@ -373,8 +373,7 @@ footer {
     .container-projects {
         .proyecto{
             .content {
-                padding: 6em 2em;
-                h2 {font-size: 1.7em;}
+                padding: 7em 3em;
              }
         } 
     } 
@@ -406,7 +405,7 @@ footer {
 
 @media screen and (max-width:1024px) {
     header {
-        max-height: 900px;
+        height: 100vh;
         nav{
             .nav-container {
                 padding: 10px 0;
@@ -462,11 +461,11 @@ footer {
     .projects {
         .proyecto {
             .image {
-                width: 80%;
+                width: 50%;
             }
             .content {
                 padding: 5em 2em;
-                h2 {font-size: 1.5em; }
+                h2 {font-size: 2em; }
                 p { font-size: 1.1em;}
             }
         }    
@@ -489,7 +488,7 @@ footer {
 
 @media screen and (max-width:768px) {
     header {
-        max-height: 900px;
+        height: 100vh;
         nav{
             .nav-container {
                 h1 {
@@ -619,7 +618,6 @@ footer {
     header {
         background-image: url('../../img/portadaimg.webp') ;
         background-size: cover;
-        max-height: 850px;
         nav {
             height: 90px;
             .nav-container {
@@ -667,7 +665,7 @@ footer {
         .contenedor-port {
             .contenedor-text {
                 width: 80%;
-                i{ margin-top: 220px; }
+                i{ margin-top: 30vh; }
             }
         }
     }
