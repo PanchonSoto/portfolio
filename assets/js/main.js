@@ -7,7 +7,7 @@ const nombreElement = document.getElementById("nombre");
 const nombreTxt = 'Web Developer';
 let index = 1;
 
-nombreText()
+nombreText();
 function nombreText() {
     nombreElement.innerText = nombreTxt.slice(0,index);
     index++;
@@ -20,11 +20,12 @@ function nombreText() {
 
 //para que el menu se esconda
 let ubiacionPrincipal = window.pageYOffset;
+
 window.addEventListener("scroll", ()=>{
     let actualScroll = window.pageYOffset;
     if(ubiacionPrincipal>=actualScroll){
         document.getElementsByTagName("nav")[0].style.top = "0px";
-    }else {
+    }else{
         document.getElementsByTagName("nav")[0].style.top = "-110px";
     }
     ubiacionPrincipal=actualScroll;
@@ -36,4 +37,6 @@ btnMenu.onclick = ()=> {
 
 btnCancel.onclick=()=> {
     menu.classList.replace('active','desactive');
+    
 };
+
