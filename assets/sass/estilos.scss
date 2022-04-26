@@ -32,23 +32,42 @@ body {
 }
 
 html, body, div, span, applet, object,
-	iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-	pre, a, abbr, acronym, address, big, cite,
-	code, del, dfn, em, img, ins, kbd, q, s, samp,
-	small, strike, strong, sub, sup, tt, var, b,
-	u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-	form, label, legend, table, caption, tbody,
-	tfoot, thead, tr, th, td, article, aside,
-	canvas, details, embed, figure, figcaption,
-	footer, header, hgroup, menu, nav, output, ruby,
-	section, summary, time, mark, audio, video {
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
 		font-size: 100%;
 		vertical-align: baseline;
         scroll-behavior: smooth;
-	}
+}
+
+.a { color: white; font-size: 1.2em; display: block;}
+.boton {
+    max-width: 110px;
+    border: none;
+    color: #fff;
+    height: 40px;
+    max-height: 40px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+    transition-property: "background", "color";
+    font-size: 0.875rem;
+    letter-spacing: 0.03rem;
+}
+
 
 /* Header */
 header {
@@ -207,6 +226,7 @@ header {
 .container-projects .proyecto {
     display: flex;
     .image {
+        position: relative;
         width: 45%;
         max-width: 600px;
         
@@ -215,6 +235,49 @@ header {
             display: block;
             object-fit: cover;
         }
+
+        .image__overlay {
+            &>* {
+                transform: translateY(20px);
+                transition: transform 0.25s;
+            }
+            &:hover {
+                & > * {
+                    transform: translateY(0);
+                }
+                opacity: 5;
+            }
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #e6e7f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.25s;
+
+            .image__title {
+                font-size: 2.5em;
+                font-weight: bold;
+            }
+            
+            .image__description {
+                font-size: 1.25em;
+                margin-top: 15rem;
+            }
+            
+        }
+
+        .image__overlay--blur {
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+        }
+        
     }
 
     .content {
@@ -405,6 +468,7 @@ footer {
 }  */
 
 @media screen and (max-width:1024px) {
+    .d-none { display: none;}
     header {
         height: 100vh;
         nav{
@@ -488,6 +552,7 @@ footer {
 }
 
 @media screen and (max-width:768px) {
+    .d-none { display: block;}
     header {
         height: 100vh;
         nav{
@@ -616,6 +681,11 @@ footer {
 }
 
 @media screen and (max-width:425px) {
+    .image__description {
+        font-size: 1.25em;
+        margin-top: 10rem;
+    }
+    .d-none { display: none;}
     header {
         background-image: url('../../img/portadaimg.webp') ;
         background-size: cover;
