@@ -4,7 +4,7 @@ const btnMenu = document.querySelector(".hamburguer");
 const btnCancel = document.querySelector(".btn-cancel");
 
 const nombreElement = document.getElementById("nombre");
-const nombreTxt = 'Web Developer';
+const nombreTxt = 'Web/Mobile Developer';
 let index = 1;
 
 nombreText();
